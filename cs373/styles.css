@@ -1,0 +1,21 @@
+body {
+    font-family: Georgia, sans-serif;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.question {
+    font-size: 16px;
+    text-align: center;
+}
+
+.center {
+    text-align: center;
+}
+
+.headshot {
+    display: block;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
