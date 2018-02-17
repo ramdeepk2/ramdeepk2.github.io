@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <title>CS 373 Spring 2018 Blog: Krishna Ramdeep</title>
+</head>
+
+<body>
+    <img src="headshot.JPG" alt="Krishna Ramdeep head shot"
+    		class="headshot" />
+
+    <h1 class="center">CS 373 Spring 2018: Krishna Ramdeep</h1>
+
+    <h3 class="question">What did you do this past week?</h3>
+    <p>
+        Most of my time was spent working on an assignment for my Programming for Performance class and IDB1. I also had to catch up on some reading for a history class that I have this semester, since I have an exam coming up next week.
+    </p>
+
+    <h3 class="question">What's in your way?</h3>
+    <p>
+        I have a lot of work to get done before Wednesday, and I'll be out of town over the weekend, so I need to figure out some way to get it all done on Monday and Tuesday. Aside from that, not much.
+    </p>
+
+    <h3 class="question">What will you do next week?</h3>
+    <p>
+        Programming for Performance assignment due Monday at midnight, history exam on Wednesday, homework in other classes. On top of that, our group will be starting IDB2 on Thursday, so that'll eat into my time over the next month as well. I might be attending the College of Natural Sciences career fair on Tuesday, just to network.
+    </p>
+
+    <h3 class="question">What's my experience of the class?</h3>
+    <p>
+        I am enjoying the class so far. I keep rushing through the quizzes and making silly mistakes, which is a problem I hope to fix soon.
+    </p>
+
+    <h3 class="question">What's my pick-of-the-week or tip-of-the-week?</h3>
+    <p>
+        My pick of the week this week comes from my Programming for Performance class: the Barnes-Hut Algorithm. The algorithm is used for approximating force calculations on "n-body simulations", which are simulations of "[dynamic systems] of particles, usually under the influence of physical forces". The essence of the process is this: first, you take the entire space in which your particles reside and construct a tree (if you're in 2-dimensional space, you create a quadtree, where each internal node has exactly 4 children. If you're in 3-dimensional space, you'll create an octree, in which each internal node has exactly 8 children). The leaf nodes correspond to specific particles. Then, you go through an label the nodes. The leaf nodes are labeled with the corresponding particle's position, and the internal nodes are labeled with the center of mass of their children (basically, the average position of their children). Once you have these labels, you can go and approximate the force calculation on a specific particle in the following way: you take a distance threshold, and traverse through the tree. When you arrive at a node, you look at that node's label. If the label shows that the distance of the node from your particle of interest is greater than the distance threshold, you simply treat that internal node as one large body and just perform one calculation. If the distance of that node is less than your distance threshold, then you go to each of that node's children and perform the same operation again. This approximation works because many physical forces are inverse-square laws, which means that the magnitude of the force between two particles is inversely related to the square of the distance between them, so as distance becomes very large, force becomes very small, meaning that we don't lose much accuracy when we approximate. The performance of this algorithm is O(nlog(n)), as opposed to O(n^2) if you did the precise calculations.
+    </p>
+</body>
