@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <title>CS 373 Spring 2018 Blog: Krishna Ramdeep</title>
+</head>
+
+<body>
+    <img src="headshot.JPG" alt="Krishna Ramdeep head shot"
+    		class="headshot" />
+
+    <h1 class="center">CS 373 Spring 2018: Krishna Ramdeep</h1>
+
+    <h3 class="question">What did you do this past week?</h3>
+    <p>
+        This past week I spent a lot of time studying for my Computer Vision exam and completing my final pre-spring break assignment for Programming for Performance. Aside from that, I met with some group members to discuss our API (potential endpoints, usage, and data format) and how to set up the database (using SQLAlchemy provided by Flask). 
+    </p>
+
+    <h3 class="question">What's in your way?</h3>
+    <p>
+        I have an exam the Tuesday back from spring break, so that will probably eat up my last few days of break. I also need to update the API documentation from phase 1 of the project to reflect our new design. After <i>that</i>, I have another exam coming up the second Monday back from break. There's no rest for the weary.
+    </p>
+
+    <h3 class="question">What will you do next week?</h3>
+    <p>
+        Enjoy the first half of my break, then start working during the second half. I'm not really traveling anywhere, so I'll just relax at home.
+    </p>
+
+    <h3 class="question">What's my experience of the class?</h3>
+    <p>
+        My experience hasn't really changed from last week. I'm feeling the pressure for the phase 2 deadline coming up after break, but I have confidence that my group members and I will get it all done.
+    </p>
+
+    <h3 class="question">What's my pick-of-the-week or tip-of-the-week?</h3>
+    <p>
+        My pick of the week this week is a fairly simple randomized algorithm for verifying polynomial equality. Let's say you have a polynomial f(x) expressed as the product of multiple polynomials and another polynomial g(x), and you want to know if f(x) = g(x). Now, you're probably wondering, why don't you just multiply all the smaller polynomials that compose f(x) and compare that to g(x)? That'll give you the right answer 100% of the time. That's true, but that can be difficult to code and, depending on the way you code it, quite computationally complex. A simple solution is this: given that the degree of f(x) and g(x) is <i>d</i>, choose a number <i>r</i> from the set {1, 2, ..., 100<i>d</i>} uniformly at random (that is, <i>r</i> has an equal probability of being any number from that set). Then, compute the values f(r) and g(r). If f(r) = g(r), then output that f(x) = g(x). If f(r) != g(r), then output that f(x) != g(x). This algorithm can only give the wrong output if f(r) = g(r) but f(x) != g(x), which happens with probability at most 1/100. Why? If f(r) = g(r), that means the polynomial f(x) - g(x) has root <i>r</i>. By the fundamental theorem of algebra, a polynomial can have at most as many roots as the value of its degree. Since f(x) - g(x) has degree <i>d</i>, it can have at most <i>d</i> roots. That means the probability of choosing <i>r</i> as a root of f(x) - g(x) is at most <i>d</i>/100<i>d</i>, or 1/100. 
+    </p>
+</body>
